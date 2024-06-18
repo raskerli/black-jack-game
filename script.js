@@ -209,7 +209,7 @@ $("#stand").click(function () {
       if (standClicked) {
         $(".start").remove();
         nextSequenceDealer();
-        while (dealerPoints <= playerPoints && dealerPoints <= 16) {
+        while (dealerPoints <= playerPoints && dealerPoints <= 17) {
           nextSequenceDealer();
         }
         if (dealerPoints > 21) {

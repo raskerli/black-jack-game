@@ -176,7 +176,7 @@ $("#hit").click(function () {
     nextSequencePlayer();
     //check for lose from above 21
     if (playerPoints > 21) {
-      $("h1").text("You lose click to the deck to restart");
+      $("h1").text("You Lose click to the deck to restart");
       $(".start").remove();
       nextSequenceDealer();
       startOver();
@@ -218,6 +218,10 @@ $("#stand").click(function () {
           playSound("win");
         } else if (dealerPoints == playerPoints) {
           $("h1").text("Draw click to the deck to restart");
+          startOver();
+          playSound("win");
+        } else if (dealerPoints < playerPoints) {
+          $("h1").text("You Win click to the deck to restart");
           startOver();
           playSound("win");
         } else {
